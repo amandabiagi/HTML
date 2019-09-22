@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <select name="" id="produtos">
+    <option value="4.99">Manteiga</option>
+    <option value="5.00">Leite</option>
+    <option value="3.00">Farinha</option>
+    <option value="4.00">Amido de milho</option>
+    </select>
+    <button  onclick="ver_preço()">Ver Preço</button>
+    <div id="preco"></div>
+
+</body>
+</html>
+
+<script>
+function ver_preço() {
+
+preco.innerHTML = `Isso custa R$${produtos.value}`;
+}
+</script>

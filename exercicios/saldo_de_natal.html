@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Saldo de natal!</title>
+</head>
+<body>
+    <center>
+    Informe o valor do seu salário:
+    <input type="text" name="" id="salario">
+    Informe a mesada do seu filho:
+    <input type="text" name="" id="mesada">
+    Informe o abono de natal:
+    <input type="text" name="" id="abono">
+    <button onclick="calcular()">Calcular saldo</button>
+    <br>
+    <div id="resultado"></div>
+    </center>
+</body>
+</html>
+
+<script>
+function calcular() {
+    var saldo_mesada = salario.value -= mesada.value;
+    var saldo_total = saldo_mesada+=Number(abono.value); 
+   alert(`${saldo_total}`);
+
+}
+</script>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h2>Digite seu salário</h2> 
+<input type="text" name="" id="salario">
+<select name="" id="desconto">
+    <option value="0.10">INSS</option>
+    <option value="0.2">IR</option>
+    <option value="0.05">VT</option>
+</select>
+<button onclick="ver_desconto()">Ver desconto</button>
+<div id="mostrar"></div>
+</body>
+</html>
+
+<script>
+ var sal = 0;
+
+function ver_desconto() {
+    sal = salario.value;
+    sal = sal * desconto.value;
+    mostrar.innerHTML = `${sal}`;
+}
+</script>

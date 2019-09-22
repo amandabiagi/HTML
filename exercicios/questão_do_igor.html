@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eeee Igor</title>
+</head>
+<body>
+    <center>
+    Informe o salário do irmão de Igor:
+    <br>
+    <input type="text" name="" id="salario">
+    <br>
+    Informe a quantidade de ficantes que o irmão do Igor ja teve:
+    <br>
+    <input type="text" name="" id="ficantes">
+    <br>
+    Informe a quantidade de fora que o irmão do Igor já levou:
+    <br>
+    <input type="text" name="" id="foras">
+    <br>
+    <button onclick="calcular()"></button>
+    <div id="resultado"></div>
+</body>
+</html>
+
+<script>
+function calcular() {
+    var meta_salario = salario.value*1.1;
+    var meta_ficante = ficantes.value++;
+    var meta_foras = foras.value--;
+
+    alert(`Salario do irmão do Igor é ${salario.value}, então o Igor terá um salário de ${meta_salario}.`);
+    alert(`O irmão do Igor ficou com ${ficantes.value}, então o Igor ficará com ${meta_ficantes}.`);
+    alert(`O irmão do Igor levou ${foras.value}, então o Igor irá levar ${meta_foras}.`);
+}
+</script>

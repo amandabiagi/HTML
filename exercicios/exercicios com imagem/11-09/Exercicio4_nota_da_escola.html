@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nota da escola</title>
+</head>
+<body>
+    <center>
+    <div style="margin-top: 15px">Informe sua nota na escola: </div>
+    <br>
+    <input type="text" name="" id="nota">
+    <br>
+    <button onclick="vo()" style="margin-top: 15px">Informar opnião da avó</button>
+    <br>
+    <div id="vo_id"></div>
+    <br>
+    <button onclick="mae()" style="margin-top: 15px">Informar opnião da mãe</button>
+    <div id="mae_id"></div>
+</center>
+</body>
+</html>
+
+<script>
+function vo() {
+vo_id.innerHTML = `Muito bem, que neto inteligente, porque tirou ${nota.value}`;
+}
+
+function mae() {
+mae_id.innerHTML = `Não fez mais que tua obrigação com essa nota ${nota.value} `;
+}
+
+</script>

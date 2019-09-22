@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h2> Aterando o corpo da página em várias partes </h2>
+    Quanto eu como por dia? <br>
+    Em proteinas? <input type="text" name="" id="proteinas"><br>
+    Em carboidratos? <input type="text" name="" id="carboidratos">
+    <br>
+    <button onclick="magica()">aaa</button>
+    <br>
+    <div id="div_mensaguem" style="display: none; color: red">
+        Diariamente você come:
+        <span style="color: red" id="ver_proteinas"> ? proteinas</span>
+        e 
+        <span style="color: blue"> ? carboidratos
+        <b id="ver_carboidratos"></b>
+        </span> <br>
+    </div>
+
+</body>
+</html>
+
+<script>
+function magica() 
+{
+    // trocando o corpo da tag de id 'ver_proteinas'
+    // manipulando seu 'innerHTML'
+    ver_proteinas.innerHTML = `${ver_proteinas.value}`;
+    ver_carboidratos.innerHTML = `${ver_carboidratos}`;
+
+    // mudando o estilo da tag de id 'div_
+    div_mensaguem.style.display = 'block';
+}
+</script>

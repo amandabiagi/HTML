@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        Informar ingressos vendidos (estudantes):
+        <br>
+        <input type="text" name="" id="estudantes">
+        <br>
+        Informar ingressos vendidos (comuns):
+        <br>
+        <input type="text" name="" id="comuns">
+        <br>
+        Informar o valor do ingresso comum:
+        <br>
+        <input type="text" name="" id="valor">
+        <br>
+        <button onclick="arrecadacao()">Calcular</button>
+    </center>
+</body>
+</html>
+
+<script>
+function arrecadacao() 
+{
+    var valor_ganho = comuns.value + (estudantes.value/2) 
+    alert(`O valor arrecadado foi ${valor_ganho}`);
+}
+</script>

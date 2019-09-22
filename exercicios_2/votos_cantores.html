@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div style="font-size: 30px"> Quantidade de votos: <span id="qtd_total"></span></div>
+    <br>
+    <img src="beatles.jpg" alt="beatles">
+    <div style="font-size: 30px">Votos Beatles: <span id="qtd_votos_beatles"></span></div>
+    <button onclick="votar_beatles()" style="font-size: x-large">Votar</button>
+    <br>
+
+    <img src="janis.jpeg" alt="Janis" style="width: 1100px">
+    <div style="font-size:  30px; width: 120px">Votos Janis: <span id="qtd_votos_janis"></span></div>
+    <button onclick="votar_janis()">Votar</button>
+</body>
+</html>
+
+<script>
+
+ var total = o
+ var voto_beatles = 0
+
+function votar_beatles() {
+    qtd_total = total;
+    qtd_votos_beatles = voto_beatles;
+    total = total++;
+    voto_beatles = voto_beatles++
+    qtd_total.innerHTML = `${total}`;
+    qtd_votos_beatles.innerHTML = `${voto_beatles}`;
+}
+
+
+</script>
+

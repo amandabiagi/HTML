@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<center>
+    <div style="font-size: 30px; font-family: cursive">Curso Tio Patinhas para os netos!!</div>
+    <br>
+    <div style="color: blue; font-family: cursive; font-size: 25px">Total guardado no cofrinho: <span id="total"></span></div>
+    <br>
+    <button onclick="depositar_50()">Depositar 50 centavos</button>
+    <br>
+    <div style="font-size: 25px; font-family: cursive; color: blue">Depositos efetuados: <span id="depositos"></span></div>
+    <button onclick="depositar_200()">Depositar R$2,00</button>
+</center>
+</body>
+</html>
+
+<script>
+var saldo = 0;
+var depositos_efetivados = 0;
+function depositar_50() {
+saldo += 0.50;
+++depositos_efetivados;
+
+total.innerHTML = `${saldo}`;
+depositos.innerHTML = `${depositos_efetivados}`;
+}
+
+function depositar_200() {
+    saldo += 2;
+    ++depositos_efetivados;
+
+    total.innerHTML = `${saldo}`;
+depositos.innerHTML = `${depositos_efetivados}`;
+
+}
+
+
+
+</script>

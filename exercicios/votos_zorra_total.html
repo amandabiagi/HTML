@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <center>
+                <div style="font-size: 30px; font-family: sans-serif; margin-top: 100px"> Votor na Praça é nossa:<span id="praca"></span></div>
+                <button onclick="votar_praca()" style="font-size: 15px; margin-top: 10px">Votar na Praça é nossa!</button>
+                <br>
+                <div style="font-family: sans-serif; font-size: 30px">Votos na Zorra total: <span id="zorra"></span></div>
+                <button onclick="votar_zorra()" style="font-size: 15px;margin-top: 10px">Votar no Zorra total!</button>
+                <br>
+                <div style="font-size: 30px; font-family: sans-serif">Total de votos: <b><span id="total"></span></b></div>
+            </center>
+</body>
+</html>
+<script>
+        votos_praca = 0;
+        qtd_votos = 0;
+        votos_zorra = 0;
+        
+        function votar_praca() {
+            ++votos_praca;
+            ++qtd_votos;
+            
+            praca.innerHTML = `${votos_praca}`;
+            total.innerHTML = `${qtd_votos}`;
+        }
+        
+        function votar_zorra() {
+            ++votos_zorra;
+            ++qtd_votos;
+        
+            zorra.innerHTML = `${votos_zorra}`;
+            total.innerHTML = `${qtd_votos}`;
+        }
+        </script>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calcular salário</title>
+</head>
+<body>
+<center>
+    Informe o salário:
+    <br>
+    <input type="text" name="" id="salario">
+    <br>
+    <button onclick="salario_informado()">Confirmar saldo</button>
+    <br>
+    <div id="resultado"></div>
+    <br>
+    <button onclick="conta_de_100()">Pagar conta de 100</button>
+    
+    <button onclick="conta_de_500()">Pagar conta de 500</button>
+    
+    <button onclick="ganhar_na_loteria()">Ganhar na loteria</button>
+</center>
+</body>
+</html>
+
+<script>
+
+var saldo_atual = 0;
+
+function salario_informado() {
+    saldo_atual = Number(salario.value); 
+
+    resultado.innerHTML = `${saldo_atual}`;
+}
+
+function conta_de_100() {
+    
+    saldo_atual -= 100;
+    resultado.innerHTML = `${saldo_atual}`;
+}
+
+function conta_de_500() {
+    saldo_atual -= 500;
+    resultado.innerHTML = `${saldo_atual}`;
+}
+
+function ganhar_na_loteria() {
+    saldo_atual += 2000
+    resultado.innerHTML = `${saldo_atual}`;
+}
+</script>

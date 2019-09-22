@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+
+        <img src="ventania.jpg" alt="pessoa sem dinheiro">
+        <br>
+        Quanto dinheiro terá em 6 meses ?
+        <br>
+        <input type="text" name="" id="6_meses">
+        <br>
+        Quanto dinheiro terá em 3 anos ?
+        <br>
+        <input type="text" name="" id="3_anos">
+        <br>
+        <button onclick="como_vai_estar()">Como estarei no futuro ?</button>
+
+        <div id="div_msg" style="display: none">
+            <img src="pouco_dinheiro.jpg" alt="pouco dinheiro" id="pouco_dinheiro" style="border: black; border-style: solid; width: 500px">
+            <img src="muito_dinheiro.jpg" alt="muito dinheiro" id="muito_dinheiro" style="border: black; border-style: solid; width: 420px">
+        </div>
+
+    </center>
+</body>
+</html>
+
+<script>
+function como_vai_estar() {
+    pouco_dinheiro.innerHTML = `${6_meses.value}`;
+    muito_dinheiro.innerHTML = `${3_anos.value}`;
+
+
+    div_msg.style.display = 'block'
+}
+</script>

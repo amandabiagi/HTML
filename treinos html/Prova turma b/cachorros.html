@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cães</title>
+</head>
+<body>
+    <center>
+        <div style="background: oldlace; margin-right: 700px; margin-left: 30px; border: darkcyan; border-style: solid">
+            <div style="font-size: 35px; color:chocolate; margin-top: 25px">Simulador Lulu</div>
+            <div style="font-size: 25px; color: blueviolet;margin-top: 20px">Lulu macho</div>
+            <div style="font-size: 25px; margin-top: 30px">Informe o valor mensal para cuidar do Lulu: </div>
+            <br>
+            <input type="number" name="" id="mensal_lulu" style="font-size: 15px">
+             <br>
+            <div style="font-size: 25px">Informe em quantos meses após o nascimento o Lulu macho foi vendido:</div>
+            <br>
+            <input type="number" name="" id="lulu_macho_meses_para_vender" style="font-size: 15px">
+            <br>
+           
+                <button onclick="simular_lulu_macho()"; style="font-size: x-large; margin-top: 25px">Simular</button>
+                <div id="frase_lulu_macho"; style="font-size: 25px; color: darkcyan; display: none"></div>    
+</body>
+</html>
+
+<script>
+function simular_lulu_macho() {
+    var gasto_lulu = mensal_lulu.value * lulu_macho_meses_para_vender.value;
+    var lucro_lulu_macho = 2000 - gasto_lulu
+
+    frase_lulu_macho.innerHTML = `Após ${lulu_macho_meses_para_vender.value}, você gastou R$${gasto_lulu} com o lulu macho.
+    Vendeu por R$ 2.000,00, tendo um saldo de ${lucro_lulu_macho}`;
+
+    frase_lulu_macho.style.display = 'block'
+}
+</script>

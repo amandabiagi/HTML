@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+    Informe dois valores:
+    <br>
+    <input type="text" name="" id="valor_1">
+    <br>
+    <input type="text" name="" id="valor_2">
+    <br>
+    <button onclick="somar()">Somar</button>
+    <button onclick="subtrair()">Diferença</button>
+    <button onclick="multiplicar()">Produto</button>
+    <button onclick="dividir()">Razão</button>
+
+    <div id="calculo"></div>
+  
+    </center>
+</body>
+</html>
+
+<script>
+function somar() {
+    var soma = Number(valor_1.value) + Number(valor_2.value);
+    calculo.innerHTML = `A soma é ${soma}`;
+}
+
+function subtrair() {
+    var  sub = Number(valor_1.value) - Number(valor_2.value);
+    calculo.innerHTML = `A diferença é ${sub}`;
+}
+
+function multiplicar() {
+    var mult = Number(valor_1.value) * Number(valor_2.value);
+    calculo.innerHTML = `O produto é ${mult}`;
+}
+
+function dividir() {
+    var div = Number(valor_1.value) / Number(valor_2.value);
+    calculo.innerHTML = `A razão é ${div}`;
+}
+</script>

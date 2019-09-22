@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Estrutura de decisão</h3>
+    Quanto pagou de multa na viagem ?
+    <input type="text" name="" id="multa">
+    <button onclick="ver_viagem()">Viagem</button>
+</body>
+</html>
+
+<script>
+function ver_viagem() {
+var valor_multa = Number(multa.value);
+if (valor_multa > 0) {
+    alert(`Você pagou multa de R$${valor_multa}`);
+}
+alert(`Boa viagem!!`);
+}
+
+</script>

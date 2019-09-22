@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Simulador Cachórrus</title>
+</head>
+<body style="background-image: url(fundo.jpg); background-repeat: no-repeat">
+    <center>
+        <div style="background: oldlace; margin-right: 700px; margin-left: 30px; border: darkcyan; border-style: solid">
+            <div style="font-size: 35px; color:yellowgreen; margin-top: 25px">Simulador Yorkshire</div>
+            <div style="font-size: 25px; color: blueviolet;margin-top: 20px">Lulu Yorkshire macho</div>
+            <div style="font-size: 25px; margin-top: 30px">Informe o valor mensal para cuidar do Yorkshire: </div>
+            <br>
+            <input type="number" name="" id="mensal_yorkshire_macho" style="font-size: 15px">
+             <br>
+            <div style="font-size: 25px">Informe em quantos meses após o nascimento o Yorkshore foi vendido:</div>
+            <br>
+            <input type="number" name="" id="yorkshire_macho_meses_para_vender" style="font-size: 15px">
+            <br>
+           
+                <button onclick="simular_yorkshire_macho()"; style="font-size: x-large; margin-top: 25px">Simular</button>
+                <div id="frase_yorkshire_macho"; style="font-size: 25px; color: rgb(84, 8, 206); display: none"></div>  
+        </div>
+    </center>
+
+    <center>
+        <div style="background: oldlace; margin-right: 700px; margin-left: 30px; border: darkcyan; border-style: solid; margin-top: 35px">
+            <div style="font-size: 35px; color:rgb(193, 247, 46); margin-top: 25px">Simulador Yorkshire</div>
+            <div style="font-size: 25px; color: rgb(185, 166, 202);margin-top: 20px">Lulu fêmea</div>
+            <div style="font-size: 25px; margin-top: 30px">Informe o valor mensal para cuidar da Yorkshire: </div>
+            <br>
+            <input type="number" name="" id="mensal_yorkshire_femea" style="font-size: 15px">
+             <br>
+            <div style="font-size: 25px">Informe em quantos meses após o nascimento a Yorkshire fêmea foi vendida:</div>
+            <br>
+            <input type="number" name="" id="yorkshire_femea_meses_para_vender" style="font-size: 15px">
+            <br>
+           
+                <button onclick="simular_yorkshire_femea()"; style="font-size: x-large; margin-top: 25px">Simular</button>
+                <div id="frase_yorkshire_femea"; style="font-size: 25px; color: darkcyan; display: none"></div> 
+            </div>
+    </center>
+
+
+    <center>
+        <div style="background: oldlace; margin-right: 30px; margin-left: 700px; border: darkcyan; border-style: solid">
+            <div style="font-size: 35px; color:chocolate; margin-top: 25px">Simulador Lulu</div>
+            <div style="font-size: 25px; color: blueviolet;margin-top: 20px">Lulu macho</div>
+            <div style="font-size: 25px; margin-top: 30px">Informe o valor mensal para cuidar do Lulu: </div>
+            <br>
+            <input type="number" name="" id="mensal_lulu" style="font-size: 15px">
+             <br>
+            <div style="font-size: 25px">Informe em quantos meses após o nascimento o Lulu macho foi vendido:</div>
+            <br>
+            <input type="number" name="" id="lulu_macho_meses_para_vender" style="font-size: 15px">
+            <br>
+           
+                <button onclick="simular_lulu_macho()"; style="font-size: x-large; margin-top: 25px">Simular</button>
+                <div id="frase_lulu_macho"; style="font-size: 25px; color: darkcyan; display: none"></div>    
+
+        </div>
+    </center>    
+
+    <center>
+        <div style="background: oldlace; margin-right: 30px; margin-left: 700px; border: darkcyan; border-style: solid; margin-top: 35px">
+            <div style="font-size: 35px; color:chocolate; margin-top: 25px">Simulador Lulu</div>
+            <div style="font-size: 25px; color: violet;margin-top: 20px">Lulu fêmea</div>
+            <div style="font-size: 25px; margin-top: 30px">Informe o valor mensal para cuidar da Lulu: </div>
+            <br>
+            <input type="number" name="" id="mensal_lulu_femea" style="font-size: 15px">
+             <br>
+            <div style="font-size: 25px">Informe em quantos meses após o nascimento a Lulu fêmea foi vendida:</div>
+            <br>
+            <input type="number" name="" id="lulu_femea_meses_para_vender" style="font-size: 15px">
+            <br>
+           
+                <button onclick="simular_lulu_femea()"; style="font-size: x-large; margin-top: 25px">Simular</button>
+                <div id="frase_lulu_femea"; style="font-size: 25px; color: darkcyan; display: none"></div>  
+        </div>  
+    </center>
+</body>
+</html>
+
+<script>
+    function simular_yorkshire_macho() {
+        var gasto_yorkshire_macho = mensal_yorkshire_macho.value * yorkshire_macho_meses_para_vender.value;
+        var lucro_yorkshire_macho = 800 - gasto_yorkshire_macho
+    
+        frase_yorkshire_macho.innerHTML = `Após ${yorkshire_macho_meses_para_vender.value}, você gastou R$${gasto_yorkshire_macho} com o yorkshire macho.
+        Vendeu por R$ 800,00, tendo um saldo de ${lucro_yorkshire_macho}`;
+    
+        frase_yorkshire_macho.style.display = 'block'
+    }
+
+    function simular_yorkshire_femea() {
+        var gasto_yorkshire_femea = mensal_yorkshire_femea.value * yorkshire_femea_meses_para_vender.value;
+        var lucro_yorkshire_femea = 1500 - gasto_yorkshire_femea
+    
+        frase_yorkshire_femea.innerHTML = `Após ${yorkshire_femea_meses_para_vender.value}, você gastou R$${gasto_yorkshire_femea} com a yorkshire fêmea.
+        Vendeu por R$ 1.500,00, tendo um saldo de ${lucro_yorkshire_femea}`;
+    
+        frase_yorkshire_femea.style.display = 'block'
+    }
+
+    function simular_lulu_macho() {
+    var gasto_lulu = mensal_lulu.value * lulu_macho_meses_para_vender.value;
+    var lucro_lulu_macho = 2000 - gasto_lulu
+
+    frase_lulu_macho.innerHTML = `Após ${lulu_macho_meses_para_vender.value}, você gastou R$${gasto_lulu} com o lulu macho.
+    Vendeu por R$ 2.000,00, tendo um saldo de ${lucro_lulu_macho}`;
+
+    frase_lulu_macho.style.display = 'block'
+    }
+
+    function simular_lulu_femea() {
+        var gasto_lulu_femea = mensal_lulu_femea.value * lulu_femea_meses_para_vender.value;
+        var lucro_lulu_femea = 4000 - gasto_lulu_femea
+    
+        frase_lulu_femea.innerHTML = `Após ${lulu_femea_meses_para_vender.value}, você gastou R$${gasto_lulu_femea} com a lulu fêmea.
+        Vendeu por R$ 4.000,00, tendo um saldo de ${lucro_lulu_femea}`;
+    
+        frase_lulu_femea.style.display = 'block'
+    }
+
+    </script>

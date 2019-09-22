@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <div style="border-color: black; border-style: solid; margin: 30px">
+        Informe o nome do guerreiro:
+        <br>
+        <input type="text" name="" id="nome">
+        <br>
+        Informar Ki do guerreiro:
+        <br>
+        <input type="text" name="" id="ki">
+        <br>
+        <button onclick="pow()">Ver Ki em cada forma</button>
+        <br>
+        <br>
+        </div>
+    </center>
+</body>
+</html>
+
+<script>
+function pow()
+{
+    var valor_ki_1 = ki.value * 50;
+    var valor_ki_2 = ki.value * 100;
+    alert(`O ${nome.value} terá ${valor_ki_1} em sua forma Sayajin`);
+    alert(`O ${nome.value} terá ${valor_ki_2} em sua forma Sayajin 2`);
+}
+</script>
